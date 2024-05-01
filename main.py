@@ -3,10 +3,11 @@ from paddles import Paddle
 import time
 
 t = Turtle()
-paddle_one = Paddle()
-paddle_one.starting_positions = [(-380, 0), (-380, -20), (-380, -40)]
-paddle_two = Paddle()
-paddle_two.starting_positions = [(380, 0), (380, -20), (380, -40)]
+start_one = Paddle().starting_positions([(-380, 0), (-380, -20), (-380, -40)])
+paddle_one = Paddle(start_one)
+start_two = Paddle().starting_positions([(380, 0), (380, -20), (380, -40)])
+paddle_two = Paddle(start_two)
+
 game_is_on = True
 
 screen = Screen()
