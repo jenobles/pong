@@ -3,14 +3,14 @@ from turtle import Turtle
 MOVE_DISTANCE = 20
 
 class Paddle:
-
+    starting_positions = []
+    
     def __init__(self):
-        self.starting_positions = []
-        self.create_paddle(self.starting_positions)
+        self.create_paddle()
         self.paddle = []
         self.head = self.paddle[0]
         
-    def create_paddle(self, starting_positions):
+    def create_paddle(self):
         for x in starting_positions:
             self.paddle_segment(x)
            
